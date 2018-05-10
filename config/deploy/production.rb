@@ -4,12 +4,12 @@
 # You can define all roles on a single server, or split them:
 
 set :stage, :production
-server 'satzcoal.com', user: 'leejingchao', roles: %w{app web db}
+server 'gcp', roles: %w{app web db}
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
+set :deploy_to, '/data/www/ruyun'
 
 # role-based syntax
 # ==================

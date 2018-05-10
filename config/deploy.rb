@@ -5,7 +5,7 @@ set :application, "ruyun"
 set :repo_url, "git@github.com:satzcoal/ruyun.git"
 
 set :use_sudo, true
-set :linked_files, %w{config/database.yml config/secrets.yml} << "config/settings/#{fetch(:stage)}.yml"
+set :linked_files, %w{config/database.yml} << "config/settings/#{fetch(:stage)}.yml"
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp', 'public')
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
